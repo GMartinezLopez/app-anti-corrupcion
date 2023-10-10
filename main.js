@@ -15,7 +15,7 @@ const rl = readline.createInterface({
 //     console.log(element);
 // });
 
-const usuario = [
+export const usuario = [
   "Nombre: Jose",
   "Apellido: Martinez",
   "Curp: 1234567890",
