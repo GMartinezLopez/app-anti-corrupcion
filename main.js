@@ -1,68 +1,18 @@
 "use strict";
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 const readline = require("readline");
-
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-
-//*****************************************************************************
-// -Sentencia para enlistar el contenido del array y mostrarlo:
-
-// ciudadano.forEach(element => {
-//     console.log(element);
-// });
-
-export const usuario = [
-  "Nombre: Jose",
-  "Apellido: Martinez",
-  "Curp: 1234567890",
-  "Correo: josem@mail.com",
-  "Contraseña: *****",
-  "Telefono: 9981234567",
-  "Dirección: Cancun, Mexico",
-  `Notificaciones: ${notificaciones = true}`
-];
-
-
-const informe = [
-  "Fecha: 10/2/2023",
-  "Hora: 1:20 PM",
-  "Descripción: Fraude fiscal en el SAT",
-  "Ubicación: Cancún, México, Q.Roo",
-  "Evidencia: Documentos",
-  "Dependencia: Gerencias",
-  "Categoría : Fraude",
-  "Servidor público : Juan Gabriel"
-];
-
-const ticket = [
-  "ID: 12345A",
-  "Fecha: 10/2/2023",
-  "Hora: 1:20 PM",
-  "Status: En investigacion",
-  "Persona asignada: Alejandro Vargas",
-  "Ubicación: Cancún, México, Q.Roo",
-  "Descripción: Fraude fiscal en el SAT",
-  "Evidencia: Documentos",
-];
-
-
-const evidencia = [
-  "-Descripción: Documentos con información alterada para el beneficio del servidor público",
-  "-Archivo: finanzas.doc",
-];
-
-const servidorPublico = [
-  "-Nombre: Manolo Sánchez",
-  "-Dependencia: Gerencias",
-  "-Cargo: Contador Jefe",
-  "-Correo: MSanjefaso@mail.com"
-];
-
-//***************************************************************************************
+import { usuario } from "./clases/usuario.js";
+import { informe } from "./clases/informe.js";
+import { ticket } from "./clases/ticket.js";
+import { evidencia } from "./clases/evidencia.js";
+import { servidorPublico } from "./clases/servidorPublico.js";
 
 const question0 = () => {
   return new Promise((resolve, reject) => {

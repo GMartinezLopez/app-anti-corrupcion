@@ -130,10 +130,3 @@ ciudadano1.iniciarSesion();
 admin1.saludar();
 admin1.iniciarSesion();
 admin1.cerrarSesion();
-
-const main = async () => {
-  await Persona();
-  rl.close();
-};
-
-main();
